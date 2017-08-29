@@ -44,6 +44,7 @@ public class ToDoItemRepository {
 				item.setText(record.get(1));
 				item.setComplete(Boolean.parseBoolean(record.get(2)));
 				listOfItems.add(item);
+				nextId = item.getId() + 1; 
 			}
 	    	}  catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -174,6 +175,7 @@ public class ToDoItemRepository {
         		System.out.println("hit exception");
         	}
         	}
+    	
     	}
     	}
     }
